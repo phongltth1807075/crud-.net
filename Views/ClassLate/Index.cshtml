@@ -1,0 +1,29 @@
+﻿@using PhatT1808A.Models
+@model List<ClassLate>
+@{
+    ViewBag.Title = "Index";
+    var totalMoney = 0.0;
+    var totalPush = 0.0;
+}
+
+<h2>Index</h2>
+<ul>
+    @foreach (var item in Model)
+    {
+
+        <li>
+            @item.StudentId - @item.Price
+        </li>
+        if (item.Type == 1)
+        {
+            totalMoney += item.Price;
+        }
+        else
+        {
+            totalPush += item.Price;
+        }
+    }
+</ul>
+<p><b>Total Money:@totalMoney</b></p>
+<p><b>Total Push:@totalPush</b></p>
+

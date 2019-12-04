@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+<form action="/ClassLate/Add" method="post">
+    <div>
+        <label>Mã sinh viên:</label>
+        <br />
+        <input type="number" name="StudentId" value="" />
+    </div>
+    <br />
+    <div>
+        <label>Hình thức nộp phạt: </label>
+        <br />
+        <input type="radio" name="type" value="1" /> Chống đẩy
+
+        <input type="radio" name="type" value="2" /> Tiền
+        <br />
+    </div>
+    <br />
+    <div>
+        <label>Số tiền (Hoặc số chống đẩy)</label>
+        <br />
+        <input type="number" name="price" value="" />
+    </div>
+    <br />
+    <div>
+        <button type="submit" value="submit">Submit</button>
+    </div>
+</form>
+
